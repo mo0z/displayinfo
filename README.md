@@ -32,5 +32,5 @@ Programming language C is used.
 ## References
 
 - <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>
-- <http://www.x.org/releases/X11R7.6/doc/libX11/specs/libX11/libX11.html>
+- <https://www.x.org/docs/X11/xlib.pdf>
 
