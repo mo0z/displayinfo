@@ -6,7 +6,7 @@ DisplayInfo prints information about the display. DisplayInfo uses xlib to retri
 Source Code is available at <https://github.com/vbsw/displayinfo>.
 
 ## Copyright
-Copyright 2017, Vitali Baumtrok <vbsw@mailbox.org>.
+Copyright 2017, Vitali Baumtrok (vbsw@mailbox.org).
 
 DisplayInfo is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -24,7 +24,9 @@ Programming language C is used.
 
 ## Dependencies
 
-	libgtk-3-dev
+	libc6-dev
+	libX11-dev
+	libgl1-mesa-dev
 
 
 ## References
