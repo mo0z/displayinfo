@@ -43,7 +43,7 @@ static void help_print_help() {
 }
 
 static void help_print_version() {
-	printf("0.1.0\n");
+	printf("1.0.0\n");
 }
 
 static void help_print_copyright() {
