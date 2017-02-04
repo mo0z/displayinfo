@@ -38,7 +38,7 @@ const char* xserver_default_display_server() {
 		return server_copy;
 
 	} else {
-		return "n.a.";
+		return 0;
 	}
 }
 

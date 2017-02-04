@@ -66,7 +66,11 @@ static void help_print_resolution() {
 
 static void help_print_server() {
 	const char *const server = xserver_default_display_server();
-	printf("%s\n",server);
+	if (server!=0) {
+		printf("%s\n",server);
+	} else {
+		printf("n.a.");
+	}
 }
 
 
