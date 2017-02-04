@@ -3,7 +3,7 @@
 ## Abstract
 DisplayInfo prints information about the display. DisplayInfo uses xlib to retrieve the data.
 
-Source Code is available at <https://github.com/vbsw/displayinfo>.
+Source code is available at <https://github.com/vbsw/displayinfo>.
 
 ## Copyright
 Copyright 2017, Vitali Baumtrok (vbsw@mailbox.org).
