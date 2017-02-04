@@ -14,6 +14,11 @@ DisplayInfo is distributed in the hope that it will be useful, but WITHOUT ANY W
 
 You should have received a copy of the GNU General Public License along with DisplayInfo. If not, see <http://www.gnu.org/licenses/>.
 
+## Example
+
+	$ displayinfo resolution
+	$ 1360x768
+
 ## Clone Repository
 Clone this project to folder "DisplayInfo":
 
