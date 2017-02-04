@@ -19,47 +19,18 @@
  */
 
 
-#include <X11/Xlib.h>
-
-extern char* util_copy_string(const char *const string);
+#include <stdlib.h>
+#include <string.h>
 
 
 /* ************************* */
 /*    exported functions     */
 /* ************************* */
 
-const char* xserver_default_display_server() {
-	Display* display = XOpenDisplay(0);
-
-	if (display!=0) {
-		const char *const server = DisplayString(display);
-		const char *const server_copy = util_copy_string(server);
-		XCloseDisplay(display);
-		return server_copy;
-
-	} else {
-		return "n.a.";
-	}
-}
-
-void xserver_resolution(int *const width, int *const height) {
-	Display* display = XOpenDisplay(0);
-
-	if (display!=0) {
-		Window window;
-		int revert_to_return;
-		XWindowAttributes window_attributes;
-		XGetInputFocus(display,&window,&revert_to_return);
-		XGetWindowAttributes(display,window,&window_attributes);
-
-		width[0] = window_attributes.screen[0].width;
-		height[0] = window_attributes.screen[0].height;
-
-		XCloseDisplay(display);
-
-	} else {
-		width[0] = -1;
-		height[0] = -1;
-	}
+char* util_copy_string(const char *const string) {
+	const int string_size = sizeof(char)*(strlen(string)+1);
+	char* string_copy = malloc(string_size);
+	memcpy(string_copy,string,string_size);
+	return string_copy;
 }
 

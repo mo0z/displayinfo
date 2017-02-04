@@ -28,16 +28,18 @@ extern int args_is_resolution();
 extern int args_is_server();
 extern int args_is_resolution();
 extern int args_is_server();
+extern const char* xserver_default_display_server();
+extern void xserver_resolution(int *const width, int *const height);
 
 
 static void help_print_help() {
-	printf("Usage:       displinfo OPTION\n");
+	printf("Usage:        displayinfo OPTION\n");
 	printf("OPTIONs:\n");
 	printf("  help        prints this help\n");
 	printf("  version     prints version\n");
 	printf("  copyright   prints copyright and copying conditions\n");
-	printf("  resolution  prints current screen id and its resolution\n");
-	printf("  server      prints the default X server connection string\n");
+	printf("  resolution  prints resolutions of current screen\n");
+	printf("  server      prints default X server connection string\n");
 }
 
 static void help_print_version() {
@@ -45,7 +47,7 @@ static void help_print_version() {
 }
 
 static void help_print_copyright() {
-	printf("Copyright (C) 2017 Vitali Baumtrok\n");
+	printf("Copyright (C) 2017 Vitali Baumtrok (vbsw@mailbox.org)\n");
 	printf("This program is free software: you can redistribute it and/or modify\n");
 	printf("it under the terms of the GNU General Public License as published by\n");
 	printf("the Free Software Foundation, either version 3 of the License, or\n");
@@ -53,11 +55,18 @@ static void help_print_copyright() {
 }
 
 static void help_print_resolution() {
-
+	int width, height;
+	xserver_resolution(&width,&height);
+	if (width>=0 && height>=0) {
+		printf("%ix%i\n",width,height);
+	} else {
+		printf("n.a.\n");
+	}
 }
 
 static void help_print_server() {
-
+	const char *const server = xserver_default_display_server();
+	printf("%s\n",server);
 }
 
 
