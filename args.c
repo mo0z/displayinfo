@@ -94,7 +94,6 @@ void args_initialize(const int argc, const char *const *const argv) {
 
 int args_is_valid() {
 	return    args_state != STATE_NOT_INITIALIZED
-	       && args_state != STATE_NO_ARGUMENTS
 	       && args_state != STATE_UNKNOWN_ARGUMENT
 	       && args_state != STATE_TOO_MANY_ARGUMENTS;
 }

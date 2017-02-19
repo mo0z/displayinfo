@@ -21,7 +21,6 @@
 
 extern void args_initialize(int argc, char** argv);
 extern int args_is_valid();
-extern int args_is_none();
 extern void help_print();
 extern void help_print_hint();
 extern void error_print();
@@ -32,9 +31,6 @@ int main(int argc, char** argv) {
 
 	if (args_is_valid()) {
 		help_print();
-
-	} else if (args_is_none()) {
-		help_print_hint();
 
 	} else {
 		error_print();

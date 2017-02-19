@@ -22,6 +22,7 @@
 #include <stdio.h>
 
 extern int args_is_help();
+extern int args_is_none();
 extern int args_is_copyright();
 extern int args_is_version();
 extern int args_is_resolution();
@@ -43,7 +44,7 @@ static void help_print_help() {
 }
 
 static void help_print_version() {
-	printf("1.0.0\n");
+	printf("1.0.1\n");
 }
 
 static void help_print_copyright() {
@@ -83,7 +84,7 @@ void help_print_hint() {
 }
 
 void help_print() {
-	if (args_is_help()) {
+	if (args_is_help() || args_is_none()) {
 		help_print_help();
 
 	} else if (args_is_version()) {
