@@ -34,12 +34,12 @@ extern void xserver_resolution(int *const width, int *const height);
 
 
 static void help_print_help() {
-	printf("Usage:        displayinfo OPTION\n");
-	printf("OPTIONs:\n");
+	printf("Usage:        displayinfo <command>\n");
+	printf("COMMAND:\n");
 	printf("  help        prints this help\n");
 	printf("  version     prints version\n");
 	printf("  copyright   prints copyright and copying conditions\n");
-	printf("  resolution  prints resolutions of current screen\n");
+	printf("  resolution  prints resolution of current screen\n");
 	printf("  server      prints default X server connection string\n");
 }
 
